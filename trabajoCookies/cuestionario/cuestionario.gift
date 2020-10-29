@@ -1,4 +1,4 @@
-$CATEGORY: Cookies
+$CATEGORY: $course$/top/Tema3/Cookies
 
 ::1.¿Cómo se puede crear una cookie?:: {
     =document.cookie\="clave\=valor";
