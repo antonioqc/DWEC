@@ -1,0 +1,100 @@
+$CATEGORY: Cookies
+
+::1.¿Cómo se puede crear una cookie?:: {
+    =document.cookie\="clave\=valor";
+    ~cookie\="valor";
+    ~clave\=valor;
+    ~cookie\="clave\=valor";
+}
+
+::2.Para actualizar una cookie ya existente se hace de la siguiente manera...:: {
+    ~cookie.update\="Nuevovalor";
+    ~document.cookie\="Nuevovalor";
+    =document.cookie\="claveExistente\=Nuevovalor";
+    ~cookie\="claveExistente\=Nuevovalor";
+}
+
+::3.¿Cómo se pueden ver las cookies? ::{
+    ~cookie;
+    =document.cookie;
+    ~cookie.get("claveExistente");
+    ~document.cookie\="claveExistente";
+}
+
+::4.Para borrar una cookie...:: {
+    ~No se puede borrar,cuando se cierra el navegador desaparece
+    =Se debe indicar una fecha anterior a la actual con el parámetro expires
+    ~Se borrará con el parámetro delete, sino se indica se alojará indefinidamente en el navegador
+    ~Solo se tiene que colocar el parámetro expire 
+}
+
+::5.¿Cómo podemos almacenar datos en el navegador con localStorage?:: {
+    ~local.Storage\="clave\=valor";
+    ~localStorage\="clave\=valor";
+    =localStorage.setItem("clave","valor");
+    ~localStorage.setItem("valor","clave");
+}
+
+::6.Con sessionStorage puedo almacenar información en el navegador de forma indefinida :: {
+    ~Verdadero
+    =Falso
+}
+
+::7.El atributo max-age de document.cookie especifica la duración maxima en segundos  de la cookie... :: {
+    =Verdadero
+    ~Falso
+}
+
+::8.El atributo expires de document.cookie... :: {
+    ~Establece una duración máxima en segundos para la cookie.
+    =Es un atributo opcional y establece el tiempo de validez en formato fecha.
+    ~Es un atributo obligatorio con formato fecha donde se establece el tiempo de validez en segundos.
+}
+
+::9.¿Qué sintaxis es la correcta? ::{
+    ~document.cookie \= "nombre\=nombre1; document.cookie \= nombre\=nombre2";
+    =document.cookie \= "nombre\=nombre1"; document.cookie \= "nombre\=nombre2";
+    ~document.cookie \= "nombre"\="nombre1"; document.cookie \= "nombre"\="nombre2";
+    ~"document.cookie \= nombre\=nombre1"; "document.cookie \= nombre\=nombre2";
+}
+
+::10.¿Qué está haciendo el código anterior? ::{
+    =Crear o modificar una nueva cookie si ya existe
+    ~Modificar el valor de la cookie 
+    ~Eliminar la cookie
+    ~Crear una nueva cookie
+}
+
+
+::11. La única diferencia entre sessionStorage y localStorage es ::{
+    ~Uno almacena en el servidor y otro en cliente
+    ~Uno sirve para almacenar y otro para mostrar
+    =El tiempo de almacenamiento
+    ~Los metodos que utiliza para almacenar datos
+}
+
+::12.Con la propiedad LocalStorage se almacena de forma indefinida la información…:: {
+    ~Siempre, sin poder borrarla
+    =A no ser que se borren las cookies o se eliminen las claves almacenadas en el storage
+    ~A no ser que se le aplique la propiedad expired con una fecha anterior a la actual
+    ~Solo si así se indica en el código
+}
+
+::13.sessionStorage a diferencia de LocalStorage, se trata de una propiedad que recoge las variables almacenadas en el buscador para así tratarlas::{
+    =Falso
+    ~Verdadero
+}
+
+::14. Selecciona el atributo que NO pertenece a document.cookie:: {
+    ~ secure
+    ~ domain\=domain
+    ~ samesite
+    =clear
+}
+
+::15. ¿Que realiza este código?:: <img src \= "img/imagen.png"> {
+    =Almacenar durante la sesión el valor escrito en el textArea, y comprobar que si recarga la página este valor seguirá mostrándose en el textArea. Pero al cerrar la sesión este valor desaparecerá
+    ~ Almacenar durante la sesión el valor escrito en el textArea, y comprobar que si recarga la página este valor seguirá mostrándose en el textArea. Además de enviar la información al servidor
+    ~ Almacenar durante la sesión el valor escrito en el textArea, y comprobar que si recarga la página este valor seguirá mostrándose en el textArea. Almacenando indefinidamente la información en el navegador
+    ~Guardar el texto escrito en el textArea dentro de las cookies del navegador, sin indicar una fecha de caducidad.
+}
