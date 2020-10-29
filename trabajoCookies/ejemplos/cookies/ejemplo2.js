@@ -1,3 +1,6 @@
+/**
+ * @author Antonio Quesada Cuadrado
+ */
 document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("click",alertCookie); //Evento
     document.cookie = "nombre=antonio"; //Creación
